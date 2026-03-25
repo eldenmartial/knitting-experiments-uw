@@ -1,0 +1,65 @@
+\documentclass[acmsmall,screen,review,anonymous,nonacm]{acmart}
+\usepackage{silence}
+\WarningFilter{latex}{Command \showhyphens has changed}
+
+
+\title{knitting-metrics}
+\author{TODO}
+
+\begin{document}
+
+\maketitle
+
+\section{Notes?}
+
+\section{Prior work}
+\subsection{Applications}
+\begin{itemize}
+    \item \citet{McCann2016} introduced knitout, a machine-independent
+    language for knitting akin to assembly
+    \item \citet{2018-autoknit} introduced autoknit, a tool
+    for mostly automatically creating programs to knit 3D meshes
+\end{itemize}
+
+\subsection{Topological semantics}
+\begin{itemize}
+    \item \citet{Lin2023} proposed topological equivalence
+    for knitted objects
+    \item \citet{Hurtig2025} turned the topology into
+    category theory, and proposed an polynomial-time
+    decision procedure for topological equivalence of
+    knitted objects
+\end{itemize}
+
+\subsection{Compiler optimization}
+\begin{itemize}
+    \item \citet{10.1145/3654777.3676405} introduced KODA,
+    a knitout optimizer that rearranges instructions according
+    to yarn and topological dependencies
+    \item \citet{10.1145/3687948} use the semantic model
+    in \citet{Lin2023} to describe an IR for machine knitting
+\end{itemize}
+
+\subsection{Metric stuff}
+\begin{itemize}
+    \item \citet{Ohlson2023} propose using linear regression
+    to measure the amount of yarn a program might consume
+    \item We're gonna do that, but more
+\end{itemize}
+
+\subsection{Long-term themes}
+\begin{itemize}
+    \item Combine the greedy algorithm from \citet{10.1145/3654777.3676405},
+    more liberal topological rewrites
+    enabled by the topology of \citet{Hurtig2025},
+    and metric info from our experiments to make a kickass compiler
+    that outperforms KODA~\cite{10.1145/3654777.3676405} and is a huge
+    upgrade to autoknit~\cite{2018-autoknit}
+    \item Make a high-level, fully expressive, declarative machine knitting
+    language using the compiler as a backend
+\end{itemize}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\end{document}

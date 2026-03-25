@@ -1,0 +1,529 @@
+@article{Hurtig2025,
+author = {Hurtig, Nathan and Lin, Jenny Han and Price, Thomas S. and Schulz, Adriana and McCann, James and Bernstein, Gilbert Louis},
+title = {Polynomial-Time Program Equivalence for Machine Knitting},
+year = {2025},
+issue_date = {August 2025},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {9},
+number = {ICFP},
+url = {https://doi.org/10.1145/3747517},
+doi = {10.1145/3747517},
+abstract = {We present an algorithm that canonicalizes the algebraic representations of the topological semantics of machine knitting programs. Machine knitting is a staple technology of modern textile production where hundreds of mechanical needles are manipulated to form yarn into interlocking loop structures. Our semantics are defined using a variant of a monoidal category, and they closely correspond to string diagrams. We formulate our canonicalization as an Abstract Rewriting System (ARS) over words in our category, and prove that our algorithm is correct and runs in polynomial time.},
+journal = {Proc. ACM Program. Lang.},
+month = aug,
+articleno = {248},
+numpages = {29},
+keywords = {braids, canonicalization, fenced tangles, machine knitting, monoidal categories, normal forms, program equivalence, string diagrams}
+}
+@inproceedings{Ohlson2023,
+author = {Ohlson, Gabrielle and Bonilla Fominaya, Angelica M. and Puthuveetil, Kavya and Wang, Jenny and Amspoker, Emily and McCann, James},
+title = {Estimating Yarn Length for Machine-Knitted Structures},
+year = {2023},
+isbn = {9798400703195},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3623263.3623355},
+doi = {10.1145/3623263.3623355},
+abstract = {We show that a linear model is sufficient to accurately estimate the quantity of yarn that goes into a knitted item produced on an automated knitting machine. Knitted fabrics are complex structures, yet their diverse properties arise from the arrangement of a small number of discrete, additive operations. One can estimate the masses of each of these basic yarn additions using linear regression and, in turn, use these masses to estimate the overall quantity (and local distribution) of yarn within any knitted fabric. Our proposed linear model achieves low error on a range of fabrics and generalizes to different yarns and stitch sizes. This paves the way for applications where having a known yarn distribution is important for accuracy (e.g., simulation) or cost estimation (e.g., design).},
+booktitle = {Proceedings of the 8th ACM Symposium on Computational Fabrication},
+articleno = {3},
+numpages = {9},
+keywords = {automated fabrication, linear regression, machine knitting, yarn estimation},
+location = {New York City, NY, USA},
+series = {SCF '23}
+}
+@article{knot,
+ ISSN = {0003486X},
+ URL = {http://www.jstor.org/stable/24523342},
+ abstract = {We prove that any diagram of the unknot with c crossings may be reduced to the trivial diagram using at most (236c)11 Reidemeister moves.},
+ author = {Marc Lackenby},
+ journal = {Annals of Mathematics},
+ number = {2},
+ pages = {491--564},
+ publisher = {Annals of Mathematics},
+ title = {A polynomial upper bound on Reidemeister moves},
+ urldate = {2025-02-28},
+ volume = {182},
+ year = {2015}
+}
+@Inbook{Selinger2011,
+author="Selinger, P.",
+title="A Survey of Graphical Languages for Monoidal Categories",
+bookTitle="New Structures for Physics",
+year="2011",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="289--355",
+abstract="This article is intended as a reference guide to various notions of monoidal categories and their associated string diagrams. It is hoped that this will be useful not just to mathematicians, but also to physicists, computer scientists, and others who use diagrammatic reasoning. We have opted for a somewhat informal treatment of topological notions, and have omitted most proofs. Nevertheless, the exposition is sufficiently detailed to make it clear what is presently known, and to serve as a starting place for more in-depth study. Where possible, we provide pointers to more rigorous treatments in the literature. Where we include results that have only been proved in special cases, we indicate this in the form of caveats.",
+isbn="978-3-642-12821-9",
+doi="10.1007/978-3-642-12821-9_4",
+url="https://doi.org/10.1007/978-3-642-12821-9_4"
+}
+@article{Joyal1991,
+title = {The geometry of tensor calculus, I},
+journal = {Advances in Mathematics},
+volume = {88},
+number = {1},
+pages = {55-112},
+year = {1991},
+issn = {0001-8708},
+doi = {https://doi.org/10.1016/0001-8708(91)90003-P},
+url = {https://www.sciencedirect.com/science/article/pii/000187089190003P},
+author = {André Joyal and Ross Street}
+}
+@article{Lin2023,
+author = {Lin, Jenny and Narayanan, Vidya and Ikarashi, Yuka and Ragan-Kelley, Jonathan and Bernstein, Gilbert and Mccann, James},
+title = {Semantics and Scheduling for Machine Knitting Compilers},
+year = {2023},
+issue_date = {August 2023},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {42},
+number = {4},
+issn = {0730-0301},
+url = {https://doi.org/10.1145/3592449},
+doi = {10.1145/3592449},
+abstract = {Machine knitting is a well-established fabrication technique for complex soft objects, and both companies and researchers have developed tools for generating machine knitting patterns. However, existing representations for machine knitted objects are incomplete (do not cover the complete domain of machine knittable objects) or overly specific (do not account for symmetries and equivalences among knitting instruction sequences). This makes it difficult to define correctness in machine knitting, let alone verify the correctness of a given program or program transformation. The major contribution of this work is a formal semantics for knitout, a low-level Domain Specific Language for knitting machines. We accomplish this by using what we call the fenced tangle, which extends concepts from knot theory to allow for a mathematical definition of knitting program equivalence that matches the intuition behind knit objects. Finally, using this formal representation, we prove the correctness of a sequence of rewrite rules; and demonstrate how these rewrite rules can form the foundation for higher-level tasks such as compiling a program for a specific machine and optimizing for time/reliability, all while provably generating the same knit object under our proposed semantics. By establishing formal definitions of correctness, this work provides a strong foundation for compiling and optimizing knit programs.},
+journal = {ACM Trans. Graph.},
+month = jul,
+articleno = {143},
+numpages = {26},
+keywords = {machine knitting, domain specific languages, fabrication, topology, knot theory, program semantics}
+}
+@book{Murasugi1999,
+  title={A Study of Braids},
+  author={Murasugi, K. and Kurpita, B.},
+  isbn={9780792357674},
+  lccn={99027052},
+  series={Mathematics and Its Applications},
+  url={https://books.google.com/books?id=tbi_FDbSJo0C},
+  year={1999},
+  publisher={Springer Netherlands},
+    address={Norwell, MA, USA}
+}
+@article{Dehornoy2008,
+title = {Efficient solutions to the braid isotopy problem},
+journal = {Discrete Applied Mathematics},
+volume = {156},
+number = {16},
+pages = {3091-3112},
+year = {2008},
+note = {Applications of Algebra to Cryptography},
+issn = {0166-218X},
+doi = {https://doi.org/10.1016/j.dam.2007.12.009},
+url = {https://www.sciencedirect.com/science/article/pii/S0166218X08000437},
+author = {Patrick Dehornoy},
+keywords = {Braid group, Isotopy problem, Word problem, Greedy normal form, Subword reversing, Handle reduction, Dynnikov’s coordinates},
+abstract = {We describe the most efficient solutions to the word problem of Artin’s braid group known so far, i.e., in other words, the most efficient solutions to the braid isotopy problem, including the Dynnikov method, which could be especially suitable for cryptographical applications. Most results appear in the literature; however, some results about the greedy normal form and the symmetric normal form and their connection with grid diagrams may have never been stated explicitly.}
+}
+@book{wordprocessing,
+ author = {Epstein, David B. A. and Paterson, M. S. and Cannon, J. W. and Holt, D. F. and Levy, S. V. and Thurston, W. P.},
+ title = {Word Processing in Groups},
+ year = {1992},
+ isbn = {0867202440},
+ publisher = {A. K. Peters, Ltd.},
+ address = {Natick, MA, USA},
+}
+@inproceedings{Hofmann2023,
+author = {Hofmann, Megan and Albaugh, Lea and Wang, Tongyan and Mankoff, Jennifer and Hudson, Scott E},
+title = {KnitScript: A Domain-Specific Scripting Language for Advanced Machine Knitting},
+year = {2023},
+isbn = {9798400701320},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3586183.3606789},
+doi = {10.1145/3586183.3606789},
+abstract = {Knitting machines can fabricate complex fabric structures using robust industrial fabrication machines. However, machine knitting’s full capabilities are only available through low-level programming languages that operate on individual machine operations. We present KnitScript, a domain-specific machine knitting scripting language that supports computationally driven knitting designs. KnitScript provides a comprehensive virtual model of knitting machines, giving access to machine-level capabilities as they are needed while automating a variety of tedious and error-prone details. Programmers can extend KnitScript with Python programs to create more complex programs and user interfaces. We evaluate the expressivity of KnitScript through a user study where nine machine knitters used KnitScript code to modify knitting patterns. We demonstrate the capabilities of KnitScript through three demonstrations where we create: a program for generating knitted figures of randomized trees, a parameterized hat template that can be modified with accessibility features, and a pattern for a parametric mixed-material lampshade. KnitScript advances the state of machine-knitting research by providing a platform to develop and share complex knitting algorithms, design tools, and patterns. 1},
+booktitle = {Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology},
+articleno = {21},
+numpages = {21},
+location = {San Francisco, CA, USA},
+series = {UIST '23}
+}
+@article{McCann2016,
+author = {McCann, James and Albaugh, Lea and Narayanan, Vidya and Grow, April and Matusik, Wojciech and Mankoff, Jennifer and Hodgins, Jessica},
+title = {A compiler for 3D machine knitting},
+year = {2016},
+issue_date = {July 2016},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {35},
+number = {4},
+issn = {0730-0301},
+url = {https://doi.org/10.1145/2897824.2925940},
+doi = {10.1145/2897824.2925940},
+abstract = {Industrial knitting machines can produce finely detailed, seamless, 3D surfaces quickly and without human intervention. However, the tools used to program them require detailed manipulation and understanding of low-level knitting operations. We present a compiler that can automatically turn assemblies of high-level shape primitives (tubes, sheets) into low-level machine instructions. These high-level shape primitives allow knit objects to be scheduled, scaled, and otherwise shaped in ways that require thousands of edits to low-level instructions. At the core of our compiler is a heuristic transfer planning algorithm for knit cycles, which we prove is both sound and complete. This algorithm enables the translation of high-level shaping and scheduling operations into needle-level operations. We show a wide range of examples produced with our compiler and demonstrate a basic visual design interface that uses our compiler as a backend.},
+journal = {ACM Trans. Graph.},
+month = jul,
+articleno = {49},
+numpages = {11},
+keywords = {fabrication, knitting, knitting machine, transfer planning}
+}
+@article{Selinger2007,
+title = {Dagger Compact Closed Categories and Completely Positive Maps: (Extended Abstract)},
+journal = {Electronic Notes in Theoretical Computer Science},
+volume = {170},
+pages = {139-163},
+year = {2007},
+note = {Proceedings of the 3rd International Workshop on Quantum Programming Languages (QPL 2005)},
+issn = {1571-0661},
+doi = {https://doi.org/10.1016/j.entcs.2006.12.018},
+url = {https://www.sciencedirect.com/science/article/pii/S1571066107000606},
+author = {Peter Selinger},
+keywords = {Categorical model, quantum computing, dagger categories, CPM construction},
+abstract = {Dagger compact closed categories were recently introduced by Abramsky and Coecke, under the name “strongly compact closed categories”, as an axiomatic framework for quantum mechanics. We present a graphical language for dagger compact closed categories, and sketch a proof of its completeness for equational reasoning. We give a general construction, the CPM construction, which associates to each dagger compact closed category its “category of completely positive maps”, and we show that the resulting category is again dagger compact closed. We apply these ideas to Abramsky and Coecke's interpretation of quantum protocols, and to D'Hondt and Panangaden's predicate transformer semantics.}
+}
+@book{Dehornoy2021, place={Cambridge}, address={Cambridge, England}, series={London Mathematical Society Student Texts}, title={The Calculus of Braids}, publisher={Cambridge University Press}, author={Dehornoy, Patrick}, year={2021}, collection={London Mathematical Society Student Texts}} <div></div>
+
+% BEGIN LIT SEARCH, 2/24
+
+% 3D fabrication
+% verified interpreter for 3D printer G-code
+@inproceedings{10.1145/3677998.3678221,
+author = {Sottile, Matthew and Tekriwal, Mohit},
+title = {Design and Implementation of a Verified Interpreter for Additive Manufacturing Programs (Experience Report)},
+year = {2024},
+isbn = {9798400711015},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3677998.3678221},
+doi = {10.1145/3677998.3678221},
+abstract = {This paper describes the design of a verified tool for analyzing tool paths defined in the RS-274 language for 3D printing systems. We describe how the analyzer was designed to allow a mixture of verification and code-extraction techniques to be combined for constructing a correct toolpath analyzer written in the OCaml language. We show how we moved from a fully hand-written OCaml program to one incorporating verified components, highlighting architectural decisions that were made to facilitate this process. Finally, we share a set of architectural lessons that are generally applicable to other software with a similar goal of integration of verified components.},
+booktitle = {Proceedings of the 2nd ACM SIGPLAN International Workshop on Functional Software Architecture},
+pages = {10–17},
+numpages = {8},
+keywords = {3D printing, RS-274 language, formal verification, functional programming},
+location = {Milan, Italy},
+series = {FUNARCH 2024}
+}
+% 2018 UW paper: CAD for 3D objects. Solid geometry is a programming language
+@article{10.1145/3236794,
+author = {Nandi, Chandrakana and Wilcox, James R. and Panchekha, Pavel and Blau, Taylor and Grossman, Dan and Tatlock, Zachary},
+title = {Functional programming for compiling and decompiling computer-aided design},
+year = {2018},
+issue_date = {September 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {2},
+number = {ICFP},
+url = {https://doi.org/10.1145/3236794},
+doi = {10.1145/3236794},
+abstract = {Desktop-manufacturing techniques like 3D printing are increasingly popular because they reduce the cost and complexity of producing customized objects on demand. Unfortunately, the vibrant communities of early adopters, often referred to as "makers," are not well-served by currently available software pipelines. Users today must compose idiosyncratic sequences of tools which are typically repurposed variants of proprietary software originally designed for expert specialists.  This paper proposes fundamental programming-languages techniques to bring improved rigor, reduced complexity, and new functionality to the computer-aided design (CAD) software pipeline for applications like 3D-printing. Compositionality, denotational semantics, compiler correctness, and program synthesis all play key roles in our approach, starting from the perspective that solid geometry is a programming language.  Specifically, we define a purely functional language for CAD called LambdaCAD and a polygon surface-mesh intermediate representation. We then define denotational semantics of both languages to 3D solids and a compiler from CAD to mesh accompanied by a proof of semantics preservation. We illustrate the utility of this foundation by developing a novel synthesis algorithm based on evaluation contexts to "reverse compile" difficult-to-edit meshes downloaded from online maker communities back to more-editable CAD programs. All our prototypes have been implemented in OCaml to enable further exploration of functional programming for desktop manufacturing.},
+journal = {Proc. ACM Program. Lang.},
+month = jul,
+articleno = {99},
+numpages = {31},
+keywords = {3D printing, denotational semantics, language design, program synthesis}
+}
+
+% Textiles + wacky math
+% In-progress homotopy type theory for quilts
+@inproceedings{10.1145/3609023.3609803,
+author = {Clark, Charlotte and Bohrer, Rose},
+title = {Homotopy Type Theory for Sewn Quilts},
+year = {2023},
+isbn = {9798400702952},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3609023.3609803},
+doi = {10.1145/3609023.3609803},
+abstract = {This paper introduces PieceWork, an imperative programming language for the construction of designs for sewn quilts, whose semantics are inspired by Homotopy Type Theory. The goals of PieceWork include improving the diversity of sewn designs that can be represented in computational methods, demonstrating a creative application of Homotopy Type Theory, and demonstrating that the craft of quilting is a worthy object of study in programming language theory.  
+We develop an operational semantics, provide a prototype implementation and examples, and provide initial theoretical results. Type system design is in-progress.},
+booktitle = {Proceedings of the 11th ACM SIGPLAN International Workshop on Functional Art, Music, Modelling, and Design},
+pages = {32–43},
+numpages = {12},
+keywords = {quilts, homotopy type theory, creative coding, computational craft},
+location = {Seattle, WA, USA},
+series = {FARM 2023}
+}
+% Amy's quines
+@inproceedings{10.1145/3609023.3609805,
+author = {Zhu, Amy and Schulz, Adriana and Tatlock, Zachary},
+title = {Exploring Self-Embedded Knitting Programs with Twine},
+year = {2023},
+isbn = {9798400702952},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3609023.3609805},
+doi = {10.1145/3609023.3609805},
+abstract = {We examine how we might explicitly embed the intricate details of the fabrication process in the design of an object; the goal is for the programs that manufacture the object to also produce themselves within the object. We highlight how concretizing the design process of an object in the real object can help reconstruct items and remind us of the reality that all objects must be manufactured, incurring labour and environmental costs. By drawing inspiration from self-reproducing programs, we outline a new self-decoding language design centred around quines for knitting, a versatile technique in fabric construction, with both historical significance and recent advances in programmable whole-garment machines for their manufacture. We show some preliminary results of using this language design to create knitted quines, and discuss how this interesting question might be further advanced.},
+booktitle = {Proceedings of the 11th ACM SIGPLAN International Workshop on Functional Art, Music, Modelling, and Design},
+pages = {25–31},
+numpages = {7},
+keywords = {quines, knitting, fabrication, embedded information},
+location = {Seattle, WA, USA},
+series = {FARM 2023}
+}
+
+% Semantic models of knitting
+% KODA (duh)
+@inproceedings{10.1145/3654777.3676405,
+author = {Hofmann, Megan},
+title = {KODA: Knit-program Optimization by Dependency Analysis},
+year = {2024},
+isbn = {9798400706288},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3654777.3676405},
+doi = {10.1145/3654777.3676405},
+abstract = {Digital knitting machines have the capability to reliably manufacture seamless, textured, and multi-material garments, but these capabilities are obscured by limiting CAD tools. Recent innovations in computational knitting build on emerging programming infrastructure that gives full access to the machine’s capabilities but requires an extensive understanding of machine operations and execution. In this paper, we contribute a critical missing piece of the knitting-machine programming pipeline–a program optimizer. Program optimization allows programmers to focus on developing novel algorithms that produce desired fabrics while deferring concerns of efficient machine operations to the optimizer. We present KODA, the Knit-program Optimization by Dependency Analysis method. KODA re-orders and reduces machine instructions to reduce knitting time, increase knitting reliability, and manage boilerplate operations that adjust the machine state. The result is a system that enables programmers to write readable and intuitive knitting algorithms while producing efficient and verified programs.},
+booktitle = {Proceedings of the 37th Annual ACM Symposium on User Interface Software and Technology},
+articleno = {64},
+numpages = {15},
+keywords = {Digital Fabrication, Machine Knitting, Program Optimization},
+location = {Pittsburgh, PA, USA},
+series = {UIST '24}
+}
+% UFO instruction graphs: attempt to discretize the knot theory
+@article{10.1145/3687948,
+author = {Lin, Jenny Han and Ikarashi, Yuka and Bernstein, Gilbert Louis and McCann, James},
+title = {UFO Instruction Graphs Are Machine Knittable},
+year = {2024},
+issue_date = {December 2024},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {43},
+number = {6},
+issn = {0730-0301},
+url = {https://doi.org/10.1145/3687948},
+doi = {10.1145/3687948},
+abstract = {Programming low-level controls for knitting machines is a meticulous, time-consuming task that demands specialized expertise. Recently, there has been a shift towards automatically generating low-level knitting machine programs from high-level knit representations that describe knit objects in a more intuitive, user-friendly way. Current high-level systems trade off expressivity for ease-of-use, requiring ad-hoc trapdoors to access the full space of machine capabilities, or eschewing completeness in the name of utility. Thus, advanced techniques either require ad-hoc extensions from domain experts, or are entirely unsupported. Furthermore, errors may emerge during the compilation from knit object representations to machine instructions. While the generated program may describe a valid machine control sequence, the fabricated object is topologically different from the specified input, with little recourse for understanding and fixing the issue.To address these limitations, we introduce instruction graphs, an intermediate representation capable of capturing the full range of machine knitting programs. We define a semantic mapping from instruction graphs to fenced tangles, which make them compatible with the established formal semantics for machine knitting instructions. We establish a semantics-preserving bijection between machine knittable instruction graphs and knit programs that proves three properties - upward, forward, and ordered (UFO) - are both necessary and sufficient to ensure the existence of a machine knitting program that can fabricate the fenced tangle denoted by the graph. As a proof-of-concept, we implement an instruction graph editor and compiler that allows a user to transform an instruction graph into UFO presentation and then compile it to a machine program, all while maintaining semantic equivalence. In addition, we use the UFO properties to more precisely characterize the limitations of existing compilers. This work lays the groundwork for more expressive and reliable automated knitting machine programming systems by providing a formal characterization of machine knittability.},
+journal = {ACM Trans. Graph.},
+month = nov,
+articleno = {206},
+numpages = {22},
+keywords = {program semantics, machine knitting, fabrication, compilers}
+}
+% Semantics+scheduling for machine knitting compilers (duh)
+% autoknit, which introduced stitch graphs
+@article{2018-autoknit,
+ author = {Narayanan, Vidya and Albaugh, Lea and Hodgins, Jessica and Coros, Stelian and McCann, James},
+ title = {Automatic Machine Knitting of 3D Meshes},
+ journal = {ACM Trans. Graph.},
+ issue_date = {August 2018},
+ volume = {37},
+ number = {3},
+ month = aug,
+ year = {2018},
+ issn = {0730-0301},
+ pages = {35:1--35:15},
+ articleno = {35},
+ numpages = {15},
+ url = {http://doi.acm.org/10.1145/3186265},
+ doi = {10.1145/3186265},
+ acmid = {3186265},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {3D printing, CAM, Knitting, automatic knitting},
+}
+% GA tech sabetta periodic tangles
+@inproceedings{bridges2020:103,
+  author      = {Markande, Shashank G and Matsumoto, Elisabetta},
+  title       = {Knotty Knits are Tangles in Tori},
+  pages       = {103--112},
+  booktitle   = {Proceedings of Bridges 2020: Mathematics, Art, Music, Architecture, Education, Culture},
+  year        = {2020},
+  editor      = {Yackel, Carolyn and Bosch, Robert and Torrence, Eve and Fenyvesi, Krist\'{o}f},
+  isbn        = {978-1-938664-36-6},
+  issn        = {1099-6702},
+  publisher   = {Tessellations Publishing},
+  address     = {Phoenix, Arizona},
+
+  url         = {http://archive.bridgesmathart.org/2020/bridges2020-103.html}
+}
+
+
+
+% Regex
+% n log n minimization
+@incollection{HOPCROFT1971189,
+title = {An n log n algorithm for minimizing states in a finite automaton},
+editor = {Zvi Kohavi and Azaria Paz},
+booktitle = {Theory of Machines and Computations},
+publisher = {Academic Press},
+pages = {189-196},
+year = {1971},
+isbn = {978-0-12-417750-5},
+doi = {https://doi.org/10.1016/B978-0-12-417750-5.50022-1},
+address = {Cambridge, MA, USA},
+url = {https://www.sciencedirect.com/science/article/pii/B9780124177505500221},
+author = {John Hopcroft},
+abstract = {Publisher Summary
+Most basic texts on finite automata give algorithms for minimizing the number of states in a finite automaton. However, a worst case analysis of these algorithms indicates that they are n2 processes, where n is the number of states. For finite automata with large numbers of states, these algorithms are grossly inefficient. This chapter describes an algorithm for minimizing the states, in which the asymptotic running time in a worst-case analysis grows as n log n. The constant of proportionality depends linearly on the number of input symbols. The same algorithm can be used to determine if two finite automata are equivalent. Extensive use of list processing is employed to reduce the computation time. As the time needed to partition on a block is proportional to the transitions into the block, the total number of steps in the algorithm is bounded by n log n.}
+}
+% recent regex paper 1
+@article{10.1145/3591262,
+author = {Moseley, Dan and Nishio, Mario and Perez Rodriguez, Jose and Saarikivi, Olli and Toub, Stephen and Veanes, Margus and Wan, Tiki and Xu, Eric},
+title = {Derivative Based Nonbacktracking Real-World Regex Matching with Backtracking Semantics},
+year = {2023},
+issue_date = {June 2023},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {7},
+number = {PLDI},
+url = {https://doi.org/10.1145/3591262},
+doi = {10.1145/3591262},
+abstract = {We develop a new derivative based theory and algorithm for nonbacktracking regex matching that supports anchors and counting, preserves backtracking semantics, and can be extended with lookarounds. The algorithm has been implemented as a new regex backend in .NET and was extensively tested as part of the formal release process of .NET7. We present a formal proof of the correctness of the algorithm, which we believe to be the first of its kind concerning industrial implementations of regex matchers. The paper describes the complete foundation, the matching algorithm, and key aspects of the implementation involving a regex rewrite system, as well as a comprehensive evaluation over industrial case studies and other regex engines.},
+journal = {Proc. ACM Program. Lang.},
+month = jun,
+articleno = {148},
+numpages = {24},
+keywords = {symbolic, regex, matching, derivative, automata, PCRE}
+}
+% recent regex paper 2
+@article{10.1145/3704837,
+author = {Varatalu, Ian Erik and Veanes, Margus and Ernits, Juhan},
+title = {RE\#: High Performance Derivative-Based Regex Matching with Intersection, Complement, and Restricted Lookarounds},
+year = {2025},
+issue_date = {January 2025},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {9},
+number = {POPL},
+url = {https://doi.org/10.1145/3704837},
+doi = {10.1145/3704837},
+abstract = {We present a tool and theory RE# for regular expression matching that is built on symbolic derivatives, does not use backtracking, and, in addition to the classical operators, also supports complement, intersection and restricted lookarounds. We develop the theory formally and show that the main matching algorithm has input-linear complexity both in theory as well as experimentally. We apply thorough evaluation on popular benchmarks that show that RE# is over 71\% faster than the next fastest regex engine in Rust on the baseline, and outperforms all state-of-the-art engines on extensions of the benchmarks often by several orders of magnitude.},
+journal = {Proc. ACM Program. Lang.},
+month = jan,
+articleno = {1},
+numpages = {32},
+keywords = {POSIX, automata, derivative, regex}
+}
+
+% Scary math
+% rewriting symmetric monoidal categories with hypergraphs (great!)
+@inproceedings{10.1145/2933575.2935316,
+author = {Bonchi, Filippo and Gadducci, Fabio and Kissinger, Aleks and Soboci\'{n}ski, Pawe\l{} and Zanasi, Fabio},
+title = {Rewriting modulo symmetric monoidal structure},
+year = {2016},
+isbn = {9781450343916},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2933575.2935316},
+doi = {10.1145/2933575.2935316},
+abstract = {String diagrams are a powerful and intuitive graphical syntax for terms of symmetric monoidal categories (SMCs). They find many applications in computer science and are becoming increasingly relevant in other fields such as physics and control theory.An important role in many such approaches is played by equational theories of diagrams, typically oriented and applied as rewrite rules. This paper lays a comprehensive foundation for this form of rewriting. We interpret diagrams combinatorially as typed hypergraphs and establish the precise correspondence between diagram rewriting modulo the laws of SMCs on the one hand and double pushout (DPO) rewriting of hypergraphs, subject to a soundness condition called convexity, on the other. This result rests on a more general characterisation theorem in which we show that typed hypergraph DPO rewriting amounts to diagram rewriting modulo the laws of SMCs with a chosen special Frobenius structure.We illustrate our approach with a proof of termination for the theory of non-commutative bimonoids.},
+booktitle = {Proceedings of the 31st Annual ACM/IEEE Symposium on Logic in Computer Science},
+pages = {710–719},
+numpages = {10},
+location = {New York, NY, USA},
+series = {LICS '16}
+}
+% procedure to reduce reversible circuits to canonical forms, using
+% symmetric rig groupoids (special case of symmetric monoidal categories)
+@article{10.1145/3498667,
+author = {Choudhury, Vikraman and Karwowski, Jacek and Sabry, Amr},
+title = {Symmetries in reversible programming: from symmetric rig groupoids to reversible programming languages},
+year = {2022},
+issue_date = {January 2022},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {6},
+number = {POPL},
+url = {https://doi.org/10.1145/3498667},
+doi = {10.1145/3498667},
+abstract = {The Pi family of reversible programming languages for boolean circuits is presented as a syntax of combinators witnessing type isomorphisms of algebraic data types. In this paper, we give a denotational semantics for this language, using weak groupoids \`{a} la Homotopy Type Theory, and show how to derive an equational theory for it, presented by 2-combinators witnessing equivalences of type isomorphisms.  We establish a correspondence between the syntactic groupoid of the language and a formally presented univalent subuniverse of finite types. The correspondence relates 1-combinators to 1-paths, and 2-combinators to 2-paths in the universe, which is shown to be sound and complete for both levels, forming an equivalence of groupoids. We use this to establish a Curry-Howard-Lambek correspondence between Reversible Logic, Reversible Programming Languages, and Symmetric Rig Groupoids, by showing that the syntax of Pi is presented by the free symmetric rig groupoid, given by finite sets and bijections.  Using the formalisation of our results, we perform normalisation-by-evaluation, verification and synthesis of reversible logic gates, motivated by examples from quantum computing. We also show how to reason about and transfer theorems between different representations of reversible circuits.},
+journal = {Proc. ACM Program. Lang.},
+month = jan,
+articleno = {6},
+numpages = {32},
+keywords = {univalent foundations, type isomorphisms, rewriting, reversible programming languages, reversible computing, permutations, homotopy type theory, groups, groupoids}
+}
+% Something that used braided/balanced monoidal (perhaps shouldn't be 
+% included b/c too complicated)
+@inproceedings{10.1145/3661814.3662098,
+author = {Hasegawa, Masahito and Lechenne, Serge},
+title = {Braids, Twists, Trace and Duality in Combinatory Algebras},
+year = {2024},
+isbn = {9798400706608},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3661814.3662098},
+doi = {10.1145/3661814.3662098},
+abstract = {We investigate a class of combinatory algebras, called ribbon combinatory algebras, in which we can interpret both the braided untyped linear lambda calculus and framed oriented tangles. Any reflexive object in a ribbon category gives rise to a ribbon combinatory algebra. Conversely, From a ribbon combinatory algebra, we can construct a ribbon category with a reflexive object, from which the combinatory algebra can be recovered. To show this, and also to give the equational characterisation of ribbon combinatory algebras, we make use of the internal PRO construction developed in Hasegawa's recent work. Interestingly, we can characterise ribbon combinatory algebras in two different ways: as balanced combinatory algebras with a trace combinator, and as balanced combinatory algebras with duality.},
+booktitle = {Proceedings of the 39th Annual ACM/IEEE Symposium on Logic in Computer Science},
+articleno = {42},
+numpages = {14},
+keywords = {combinatory algebras, monoidal categories},
+location = {Tallinn, Estonia},
+series = {LICS '24}
+}
+@misc{m1plus,
+	author = {Stoll},
+	howpublished = {[Online]. Available from: \url{http://www.stoll.com/stoll_software_solutions_en_4/pattern_software_m1plus/3_1}},
+	title = {M1Plus pattern software},
+	year = {2011}}
+
+@misc{knitpaint,
+	author = {{Shima Seiki}},
+	howpublished = {[Online]. Available from: \url{http://www.shimaseiki.com/product/design/sdsone_apex/flat/}},
+	title = {SDS-ONE Apex3},
+	year = {2011}}
+
+
+@misc{paintknit,
+	author = {{Logica}},
+	howpublished = {[Online]. Available from: \url{https://www.paintknit.com}},
+	title = {PaintKnit},
+	year = {2023}}
+
+
+
+
+
+@article{hass-unknot-np-1999,
+author = {Hass, Joel and Lagarias, Jeffrey C. and Pippenger, Nicholas},
+title = {The computational complexity of knot and link problems},
+year = {1999},
+issue_date = {March 1999},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {46},
+number = {2},
+issn = {0004-5411},
+url = {https://doi.org/10.1145/301970.301971},
+doi = {10.1145/301970.301971},
+abstract = {We consider the problem of deciding whether a polygonal knot in 3-dimensional Euclidean space is unknotted, ie., capable of being continuously deformed without self-intersection so that it lies in a plane. We show that this problem, UNKNOTTING PROBLEM is in NP. We also consider the problem, SPLITTING PROBLEM of determining whether two or more such polygons can be split, or continuously deformed without self-intersection so that they occupy both sides of a plane without intersecting it. We show that it also is in NP. Finally, we show that the problem of determining the genus of a polygonal knot (a generalization of the problem of determining whether it is unknotted) is in PSPACE. We also give exponential worst-case running time bounds for deterministic algorithms to solve each of these problems. These algorithms are based on the use of normal surfaces and decision procedures due to W. Haken, with recent extensions by W. Jaco and J. L. Tollefson.},
+journal = {J. ACM},
+month = mar,
+pages = {185–211},
+numpages = {27},
+keywords = {computational complexity, knot theory, three-dimensional topology}
+}
+
+
+@article{kuperberg-unknot-co-np-2014,
+title = {Knottedness is in NP, modulo GRH},
+journal = {Advances in Mathematics},
+volume = {256},
+pages = {493-506},
+year = {2014},
+issn = {0001-8708},
+doi = {https://doi.org/10.1016/j.aim.2014.01.007},
+url = {https://www.sciencedirect.com/science/article/pii/S0001870814000188},
+author = {Greg Kuperberg},
+keywords = {Knottedness is in NP, Modulo GRH},
+abstract = {Given a tame knot K presented in the form of a knot diagram, we show that the problem of determining whether K is knotted is in the complexity class NP, assuming the generalized Riemann hypothesis (GRH). In other words, there exists a polynomial-length certificate that can be verified in polynomial time to prove that K is non-trivial. GRH is not needed to believe the certificate, but only to find a short certificate. This result complements the result of Hass, Lagarias, and Pippenger that unknottedness is in NP. Our proof is a corollary of major results of others in algebraic geometry and geometric topology.}
+}
+@article{Egger2011,
+title = {On Involutive Monoidal Categories},
+journal = {Theory and Applications of Categories},
+volume = {25},
+pages = {368-393},
+year = {2011},
+issn = {1201-561X},
+url = {http://www.tac.mta.ca/tac/volumes/25/14/25-14.pdf},
+author = {J. M. Egger}}
+
+@article{sanchez-pneumatic, author = {Sanchez, Vanessa and Mahadevan, Kausalya and Ohlson, Gabrielle and Graule, Moritz A. and Yuen, Michelle C. and Teeple, Clark B. and Weaver, James C. and McCann, James and Bertoldi, Katia and Wood, Robert J.},
+title = {3D Knitting for Pneumatic Soft Robotics},
+journal = {Advanced Functional Materials},
+volume = {33},
+number = {26},
+pages = {2212541},
+keywords = {additive manufacturing, metamaterials, pneumatic actuators, soft robotics, soft sensors, textiles},
+doi = {https://doi.org/10.1002/adfm.202212541},
+url = {https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adfm.202212541},
+abstract = {Abstract Soft robots adapt passively to complex environments due to their inherent compliance, allowing them to interact safely with fragile or irregular objects and traverse uneven terrain. The vast tunability and ubiquity of textiles has enabled new soft robotic capabilities, especially in the field of wearable robots, but existing textile processing techniques (e.g., cut-and-sew, thermal bonding) are limited in terms of rapid, additive, accessible, and waste-free manufacturing. While 3D knitting has the potential to address these limitations, an incomplete understanding of the impact of structure and material on knit-scale mechanical properties and macro-scale device performance has precluded the widespread adoption of knitted robots. In this work, the roles of knit structure and yarn material properties on textile mechanics spanning three regimes–unfolding, geometric rearrangement, and yarn stretching–are elucidated and shown to be tailorable across unique knit architectures and yarn materials. Based on this understanding, 3D knit soft actuators for extension, contraction, and bending are constructed. Combining these actuation primitives enables the monolithic fabrication of entire soft grippers and robots in a single-step additive manufacturing procedure suitable for a variety of applications. This approach represents a first step in seamlessly “printing” conformal, low-cost, customizable textile-based soft robots on-demand.},
+year = {2023}
+}
