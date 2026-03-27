@@ -1,0 +1,111 @@
+\documentclass[acmsmall,screen,review,anonymous,nonacm]{acmart}
+\usepackage{silence}
+\WarningFilter{latex}{Command \showhyphens has changed}
+
+
+\title{how to run knitting machine}
+\author{TODO}
+
+\begin{document}
+
+\maketitle
+
+\section{Helpful links}
+\begin{itemize}
+    \item \href{https://fablab.cs.washington.edu/}{fablab site}
+    \item \href{../SOP.pdf}{Knitting machine SOP (this doc is basically a port of it)}
+    \item \href{https://wiki.computationalmachineknitting.org/app/page/1GeyC58yhlU_17IHSqfhCyQipoM_dPPBK?p=1GeyC58yhlU_17IHSqfhCyQipoM_dPPBK}{Computational knitting machine wiki}
+\end{itemize}
+
+\section{Setup}
+\label{sec:setup}
+\begin{itemize}
+    \item Make sure Nat is in the room for now. We can figure out how to get Elden trained to
+        run the machine solo later
+    \item Make sure the air is on, and the machine is plugged in
+    \item Carriage should be on the left and selector pins should all be down
+    \item Yarn tensioning device should be twist-free and have nothing dangling into the
+        machine; yarns shouldn't be tangled with each other (somebody keeps tangling the yarns!!!)
+    \item Covers should be closed
+    \item Power on: \begin{enumerate}
+            \item Twist the big red knob
+            \item After it boots, press the clear ``drive power'' switch
+            \item If it asks ``DRIVE WITH OPERATION SWITCH'', hit the green ``operation switch''. It
+                should zero out the motors
+            \item Hit the pink ``Prepa'' button, then ``reset'' (done by pressing ``F4'')
+        \end{enumerate}
+    \item If it's the first machine run of the day (safe to assume it is), do debugging then needle training: \begin{enumerate}
+            \item Press maintenance (driver + wrench on touchscreen)
+            \item Debug mode
+            \item Highlight test pattern (``TEST PAT.'')
+            \item Press go (``F5'')
+            \item Let it run for at least 10 seconds (makes sure carriage is in a valid state), stop with ``F2''. Debug done!
+            \item Needle training: tap needle training in the maintenance menu
+            \item Tap start
+            \item Green button
+        \end{enumerate}
+\end{itemize}
+
+\section{DAT to 000}
+
+\begin{itemize}
+    \item Get a FAT32 flash stick. Usually there's one lying around the lab or in the knitting machine. Nat also has one
+    \item Put a ``.DAT'' file onto the flash stick. ``.DAT'' is Shima Seiki's assembly language; knitout has a compiler
+        to ``.DAT''.
+    \item Plug the flash stick into the APEX computer; double click the ``.DAT'' to open it in KnitPaint.
+        You'll need to press ``Exec'' to accept the defaults tfor how ot open it
+    \item Click the ``Auto'' button at the top of the screen. Make sure there's a dotted line around
+        the instructions, NOT the options (not the colored columns on either side). If not, click the instructions to select it.
+        Click OK
+    \item If you want to change carriers:
+        \begin{itemize}
+            \item Don't use the ``Carrier Change'' button
+            \item Manually change the stuff in the ``Yarn'' tab in the ``N'' row
+            \item Do the same changes for ``Y. Hold Hook''
+            \item The ``YF'' should be magically updated too now
+        \end{itemize}
+    \item Make sure the output device and file name is to your likingg (output to flash stick)
+    \item Click ``Execute'' to save to ``.000''. Accept/acknowledge any warnings here
+    \item It should come up with an ``Output Data'' window. Click ``OK'', not ``Skip''
+    \item It should have a ``Knit Simulation'' window. Always click ``Knitting Assist'' to have it look
+        for problems. No assist information is good
+    \item You can click the play button after Knitting Assist to watch the simulation go. You can use
+        the ``Area'' button (icon in top left of ``KnittingViewer'' window) to select a part of the
+        knit instructions that you want to focus in on
+    \item Once you're happy, eject the USB with the ``Remove USB'' button on the top right of the
+        main screen and yank the USB out
+\end{itemize}
+
+\section{Running a 000}
+
+\begin{itemize}
+    \item Plug the FAT32 flash stick with the ``.000'' file into the machine in its fancy USB port (machine can be on or off)
+    \item Run machine setup~\ref{sec:setup} if you haven't already
+    \item Tab the USB icon -- the menu should look a little glitched out
+    \item Tap the ``upload from folder'' looking icon
+    \item Tap the ``.000'' file that you want, then press ``F5'' and ``EXEC''
+    \item Filename should be listed on the homepage
+    \item Press ``Prepa'', then ``F5'' to prepare to run. It should beep when it's done
+    \item Green to go
+    \item Red to pause, green to resume, white is ``ultra low'' speed
+\end{itemize}
+
+\section{Turning off the machine}
+
+\begin{itemize}
+    \item Hold the clear power button until it beeps and says it powered off
+    \item Turn the big red knob
+\end{itemize}
+
+\section{Knit object is stuck in there!}
+
+Need to press off. Find Nat.
+
+\section{Something wacky is happening!}
+
+Find Nat.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\end{document}
