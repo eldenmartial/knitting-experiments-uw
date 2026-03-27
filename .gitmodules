@@ -1,0 +1,3 @@
+[submodule "compilers"]
+	path = compilers
+	url = https://github.com/nhurtig/knitout-backend-swg-rust.git
