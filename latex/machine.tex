@@ -42,6 +42,9 @@ need node, npm, and probably some packages installed.
 You can also drop a .DAT file in \href{../to-compile}{to-compile} and it'll get copied
 over to \href{../compiled}{compiled} when you run \href{../compile.sh}{compile.sh}.
 
+Finally, \href{../compile.sh}{compile.sh} will also compile all .knitout files in
+\href{../knitting-files}{knitting-files}, recursively in all subfolders too.
+
 You can manually compile knitout to .DAT with the \href{../compilers/js.js}{knitout compiler}
 in the \texttt{compilers} folder. There are two options: the original javascript compiler, and Nat's Rust port of the
 compiler. They should be identical on valid knitout, but the Rust code will run much faster (not noticeable on single

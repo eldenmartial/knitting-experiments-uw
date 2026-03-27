@@ -1,6 +1,7 @@
 [submodule "compilers"]
 	path = compilers
 	url = https://github.com/nhurtig/knitout-backend-swg-rust.git
+
 [submodule "knitout-frontend-js"]
 	path = knitout-frontend-js
-	url = https://github.com/textiles-lab/knitout-frontend-js.git
+	url = https://github.com/nhurtig/knitout-frontend-js.git
