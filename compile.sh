@@ -1,11 +1,39 @@
 #!/bin/bash
 
+rm -rf compiled
 mkdir -p compiled
 
-for file in to-compile/*.knitout; do
-  echo "Compiling $file"
-  cd compilers && cargo run --release --quiet -- "../to-compile/$(basename "$file")" "../compiled/$(basename "$file" .knitout).dat"
-done
+shopt -s nullglob
 
-echo "Results are in \`compiled\`."
+js_files=(to-compile/*.js)
+knitout_files=(to-compile/*.knitout)
+dat_files=(to-compile/*.dat)
+
+log() { echo "    $*"; }
+
+if [ ${#js_files[@]} -ne 0 ]; then
+    for file in "${js_files[@]}"; do
+        log "Expanding $(basename "$file")"
+        (cd to-compile && node "$(basename "$file")")
+        log "Compiling $(basename "$file")"
+        (cd compilers && cargo run --release --quiet -- "../to-compile/out.k" "../compiled/$(basename "$file" .js).dat")
+        rm to-compile/out.k
+    done
+fi
+
+if [ ${#knitout_files[@]} -ne 0 ]; then
+    for file in "${knitout_files[@]}"; do
+        log "Compiling $(basename "$file")"
+        (cd compilers && cargo run --release --quiet -- "../to-compile/$(basename "$file")" "../compiled/$(basename "$file" .knitout).dat")
+    done
+fi
+
+if [ ${#dat_files[@]} -ne 0 ]; then
+    for file in "${dat_files[@]}"; do
+        log "Copying $(basename "$file")"
+        cp "$file" "compiled/$(basename "$file")"
+    done
+fi
+
+log "Results are in \`compiled\`."
 

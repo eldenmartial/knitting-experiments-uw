@@ -34,12 +34,20 @@ the .knitout files you want compiled in the \href{../to-compile}{to-compile} fol
 and then find the .DAT files in  the \href{../compiled}{compiled} folder. You'll need cargo (Rust's package manager) installed to
 run the compile script.
 
+An even better option is to write a JS file using knitout JS frontend, expand that to knitout, and
+then compile it to .DAT. Just put a ``.js'' file into the \href{../to-compile}{to-compile} folder
+and run \href{../compile.sh}{compile.sh}. You need to have the JS file write to ``out.k'', and you
+need node, npm, and probably some packages installed.
+ 
+You can also drop a .DAT file in \href{../to-compile}{to-compile} and it'll get copied
+over to \href{../compiled}{compiled} when you run \href{../compile.sh}{compile.sh}.
+
 You can manually compile knitout to .DAT with the \href{../compilers/js.js}{knitout compiler}
 in the \texttt{compilers} folder. There are two options: the original javascript compiler, and Nat's Rust port of the
 compiler. They should be identical on valid knitout, but the Rust code will run much faster (not noticeable on single
 files), should have better error messages, and the source code is more organized.
 
-There are many ``.knitout'' files in \href{../compilers/examples}{compilers/examples} of varying size and complexity.
+There are many .knitout files in \href{../compilers/examples}{compilers/examples} of varying size and complexity.
 
 Run the JS compiler with \texttt{node js.js input.knitout output.dat} and the Rust compiler with \texttt{cargo run --release input.knitout output.dat}.
 If node or cargo are unhappy or not installed, use their install guides online to fix the problem or get Nat to help.
