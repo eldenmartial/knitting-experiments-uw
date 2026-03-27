@@ -3,21 +3,47 @@
 \WarningFilter{latex}{Command \showhyphens has changed}
 
 
-\title{how to run knitting machine}
-\author{TODO}
+\title{how to use knitting machine}
 
 \begin{document}
 
 \maketitle
 
-\section{Helpful links}
+\section{Helpful resources}
 \begin{itemize}
     \item \href{https://fablab.cs.washington.edu/}{fablab site}
     \item \href{../SOP.pdf}{Knitting machine SOP (this doc is basically a port of it)}
-    \item \href{https://wiki.computationalmachineknitting.org/app/page/1GeyC58yhlU_17IHSqfhCyQipoM_dPPBK?p=1GeyC58yhlU_17IHSqfhCyQipoM_dPPBK}{Computational knitting machine wiki}
+    \item \href{https://wiki.computationalmachineknitting.org/app/page/1GeyC58yhlU_17IHSqfhCyQipoM_dPPBK?p=1GeyC58yhlU_17IHSqfhCyQipoM_dPPBK}{Computational knitting machine wiki
+        (great for errors)}
+    \item \href{https://textiles-lab.github.io/knitout/knitout.html}{knitout file format}
+    \item \href{https://knit.work/}{knit.work, a knitout/machine knitting help site}
 \end{itemize}
 
-\section{Setup}
+\section{Making a .DAT file}
+
+``.DAT'' is the extension for the assembly language for Shima Seiki machines.
+If you already have a .DAT file that you'd like to turn into a knitted object,
+skip this section.
+
+One option is to make the .DAT file in KnitPaint by coloring in those pixels. That
+sucks; don't do that.
+
+A better option is to write a knitout file, and compile it to .DAT. A one-stop shop is to put
+the .knitout files you want compiled in the \href{../to-compile}{to-compile} folder, run \href{../compile.sh}{compile.sh},
+and then find the .DAT files in  the \href{../compiled}{compiled} folder. You'll need cargo (Rust's package manager) installed to
+run the compile script.
+
+You can manually compile knitout to .DAT with the \href{../compilers/js.js}{knitout compiler}
+in the \texttt{compilers} folder. There are two options: the original javascript compiler, and Nat's Rust port of the
+compiler. They should be identical on valid knitout, but the Rust code will run much faster (not noticeable on single
+files), should have better error messages, and the source code is more organized.
+
+There are many ``.knitout'' files in \href{../compilers/examples}{compilers/examples} of varying size and complexity.
+
+Run the JS compiler with \texttt{node js.js input.knitout output.dat} and the Rust compiler with \texttt{cargo run --release input.knitout output.dat}.
+If node or cargo are unhappy or not installed, use their install guides online to fix the problem or get Nat to help.
+
+\section{Knitting machine setup}
 \label{sec:setup}
 \begin{itemize}
     \item Make sure Nat is in the room for now. We can figure out how to get Elden trained to
@@ -46,7 +72,7 @@
         \end{enumerate}
 \end{itemize}
 
-\section{DAT to 000}
+\section{.DAT to .000}
 
 \begin{itemize}
     \item Get a FAT32 flash stick. Usually there's one lying around the lab or in the knitting machine. Nat also has one
@@ -76,7 +102,7 @@
         main screen and yank the USB out
 \end{itemize}
 
-\section{Running a 000}
+\section{Running a .000}
 
 \begin{itemize}
     \item Plug the FAT32 flash stick with the ``.000'' file into the machine in its fancy USB port (machine can be on or off)
@@ -94,7 +120,7 @@
 
 \begin{itemize}
     \item Hold the clear power button until it beeps and says it powered off
-    \item Turn the big red knob
+    \item Turn the big red knob so there's no power to the machine at all
 \end{itemize}
 
 \section{Knit object is stuck in there!}
