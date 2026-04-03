@@ -14,6 +14,8 @@ dat_files=(to-compile/*.dat)
 
 log() { echo "    $*"; }
 
+log "Compiling files in \`to-compile\` -- Errors are unindented and logs are indented"
+
 if [ ${#js_files[@]} -ne 0 ]; then
     for file in "${js_files[@]}"; do
         log "Expanding $(basename "$file")"
