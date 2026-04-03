@@ -5,7 +5,7 @@ k = new knitout.Writer({ carriers: ["1", "2", "3", "4", "5", "6", "7", "8", "9",
 // add some headers relevant to this job
 k.addHeader('Machine', 'SWGXYZ');
 k.addHeader('Gauge', '15');
-k.addHeader('Width', '540');
+k.addHeader('Width', '271');
 
 // swatch variables
 var height = 10;
