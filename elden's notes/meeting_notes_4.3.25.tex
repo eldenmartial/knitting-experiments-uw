@@ -1,0 +1,125 @@
+**UPDATES:**
+
+**Bought knitting needles and yarn to learn**
+
+**NOTES:**
+
+NAT: "Their basic idea: given a machine knitting program (in knitout), how much yarn will the program use up? This is roughly the same as how "stretched-out" the knit object is -- if you have 50 x 50 stitches, and you use up Y length of yarn, you can sorta-kinda calculate how much yarn is between each stitch."
+
+**NOTES:**
+
+> “Can we predict how much yarn a knitting program will use _just by reading the code_?”
+
+They say yes — by treating knitting as a sum of small building blocks, each using a fixed amount of yarn.
+
+They break knitting into
+
+- knit → makes a loop
+- tuck → stacks yarn without pulling through
+- miss → skips a needle
+- edge-knit → turning at edges
+- diagonals → yarn connecting between needles
+- x-knit → crossing beds
+
+Every knit object = a bunch of these repeated operations.
+
+ASSUMED:
+each knit uses ~constant yarn  
+each tuck uses ~constant yarn  
+
+total yarn 
+
+total_yarn =   
+  (#knit × yarn_per_knit)  
++ (#tuck × yarn_per_tuck)  
++ ...
+
+called **linear model**.
+
+finding yarn per operation:
+
+1. Knit several sample swatches
+2. Each swatch is designed to emphasize one operation
+3. Weigh each swatch
+4. Count operations in its knitout
+
+So each swatch gives an equation like:
+9480·d1 + 118·edge + 9422·knit = total_mass
+
+They stack a bunch of these and solve:
+operation counts x unknown yarn per operation = measured yarn used
+
+
+This works because mahines are very consistent, they are repeating it thousnads of times and local geometry is the same
+
+So even though fabric is messy the _average yarn per operation becomes stable_
+
+After fitting, they got values like
+
+- knit ≈ 0.39 mg
+- tuck ≈ 0.41 mg
+- miss ≈ 0.14 mg
+- x-knit ≈ 0.84 mg
+
+- loops (knit/tuck) use more yarn
+- skips (miss) use less
+- cross-bed operations use more
+
+
+Once they know this “cost per operation”
+
+1. Take a new knitout file
+2. Count operations
+3. Multiply and sum
+
+predicted yarn usage
+
+They measure mass, not length (because scales are easy).
+
+**length = mass / linear_density**
+
+So they can estimate actual yarn length.
+
+stitch size & yarn type can be tested with stich size: bigger stitches → more yarn per knit. Relationship is roughly linear. and results can be scaled using yarn density
+
+You don’t need a physics simulation of yarn.
+
+Lets us
+- estimate cost before knitting
+- simulate fabric density
+- optimize designs
+- even map where yarn is concentrated
+- etc.
+
+
+**How we could replicate this experiment?**
+
+Write knitout swatches (each isolates an operation)
+Knit them on machine
+Measure yarn used (mass or length)
+parse knitout → count ops
+
+1. Write knitout swatches (each isolates an operation)
+	- Example knitout snippet:
+		knit + f0 1  
+		knit - f0 1  
+		tuck + f1 1  
+		miss + f2 1
+	- Make ~5–7 swatches:
+		1. All knit → measures knit cost
+		2. Tuck pattern → measures tuck cost
+		3. Miss pattern (skip needles) → measures miss cost
+		4. Narrow strip → exaggerates edge
+2. Knit them on machine
+3. Measure yarn used (mass or length)
+	- Weigh yarn cone before knitting
+	- Knit swatch
+	- Weigh after
+	- Difference = yarn mass used
+4. Parse knitout → count ops
+	- write py script
+	- knit_count, tuck_count, miss_count to calculate total_yarn_used
+5. Fit the model, yarn per __
+	- operation counts x unknown yarn per operation = measured yarn used
+
+
