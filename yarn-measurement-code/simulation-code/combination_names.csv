@@ -1,0 +1,8 @@
+Machine Noise: mult, Density Noise: mult, Scale Noise: mult
+Machine Noise: mult, Density Noise: mult, Scale Noise: add
+Machine Noise: mult, Density Noise: add, Scale Noise: mult
+Machine Noise: mult, Density Noise: add, Scale Noise: add
+Machine Noise: add, Density Noise: mult, Scale Noise: mult
+Machine Noise: add, Density Noise: mult, Scale Noise: add
+Machine Noise: add, Density Noise: add, Scale Noise: mult
+Machine Noise: add, Density Noise: add, Scale Noise: add
