@@ -6,11 +6,12 @@ k = new knitout.Writer({ carriers: ["1", "2", "3", "4", "5", "6", "7", "8", "9",
 k.addHeader('Machine', 'SWGXYZ');
 k.addHeader('Gauge', '15');
 k.addHeader('Width', '271');
+k.addHeader('Position', 'Right')
 
 // swatch variables
 var height = 10;
 var width = 10;
-var c = "1";
+var c = "5";
 k.fabricPresser("auto");
 
 // bring in carrier using yarn inserting hook
@@ -24,6 +25,7 @@ for (let s = width; s > 0; s--) {
         k.miss("-", "f" + s, c);
     }
 }
+
 for (let s = 1; s <= width; s++) {
     if (s % 2 != 0) {
         k.tuck("+", "f" + s, c);
@@ -35,6 +37,7 @@ for (let s = 1; s <= width; s++) {
 
 // release the yarn inserting hook
 k.releasehook(c);
+
 
 // knit some rows back and forth
 for (var h = 0; h < height; h++) {
