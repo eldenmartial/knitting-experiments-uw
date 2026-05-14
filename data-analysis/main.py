@@ -3,35 +3,92 @@ import numpy as np
 
 atom_names = ["knit", "tuck", "miss", "x", "edge", "diag1", "diag2", "noise"]
 
+W = 116
+H = 82
+
 # each ROW corresponds to a swatch. Each COLUMN corresponds with an atom
 X = np.array(
     [
         [
-            116 * 82,  # knits (from bulk)
-            116,  # tucks (83 + 83 from cast-on)
-            116,  # misses (83 + 83 from cast-on)
-            0,  # x (all front bed)
-            83,  # edge (2 cast on rows + 82 regular rows => 84 rows, so 83 edges)
-            0,  # no diag1 (all front bed)
-            0,  # no diag2 (all front bed)
+            W * H,  # knits
+            (W / 2) * 2,  # tucks
+            (W / 2) * 2,  # misses
+            0,  # x
+            (2 + H) - 1,  # edge
+            0,  # diag1
+            0,  # diag2
             1,  # one junk as always
-        ],  # single jersey, 116 wide * 82 high AFTER cast-on
+        ],  # single jersey, W wide * H high AFTER cast-on
         [
-            (114 * 82 / 2) + 2 * 82,  # knits
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-        ],  # tuck-stitch, 116 wide * 82 high AFTER cast-on. Knits in first and last column, with checkerboard of tucks/knits between.
-        # [0, 0, 1, 0, 0, 0, 0, 0],
-        # [0, 0, 0, 1, 0, 0, 0, 0],
-        # [0, 0, 0, 0, 1, 0, 0, 0],
-        # [0, 0, 0, 0, 0, 1, 0, 0],
-        # [0, 0, 0, 0, 0, 0, 1, 0],
-        # [0, 0, 0, 0, 0, 0, 0, 1],
+            ((W - 2) * H / 2) + 2 * H,  # knits
+            (W / 2) * 2 + ((W - 2) * H / 2),  # tucks (cast on PLUS checkerboard)
+            (W / 2) * 2,  # misses
+            0,  # x
+            (2 + H) - 1,  # edge
+            0,  # diag1
+            0,  # diag2
+            1,  # one junk as always
+        ],  # tuck-stitch, W wide * H high AFTER cast-on. Knits in first and last column, with checkerboard of tucks/knits between.
+        [
+            W * H,  # knits
+            (W / 2) * 2,  # tucks
+            (W / 2) * 2,  # misses
+            0,  # x
+            (2 + H) - 1,  # edge
+            0,  # diag1
+            0,  # diag2
+            1,  # one junk as always
+        ],  # 1x1 rib, W wide * H high AFTER cast-on
+        [
+            0,  # knits
+            0,  # tucks
+            0,  # misses
+            0,  # x
+            0,  # edge
+            0,  # diag1
+            0,  # diag2
+            1,  # one junk as always
+        ],  # TODO
+        [
+            0,  # knits
+            0,  # tucks
+            0,  # misses
+            0,  # x
+            0,  # edge
+            0,  # diag1
+            0,  # diag2
+            1,  # one junk as always
+        ],  # TODO
+        [
+            0,  # knits
+            0,  # tucks
+            0,  # misses
+            0,  # x
+            0,  # edge
+            0,  # diag1
+            0,  # diag2
+            1,  # one junk as always
+        ],  # TODO
+        [
+            0,  # knits
+            0,  # tucks
+            0,  # misses
+            0,  # x
+            0,  # edge
+            0,  # diag1
+            0,  # diag2
+            1,  # one junk as always
+        ],  # TODO
+        [
+            0,  # knits
+            0,  # tucks
+            0,  # misses
+            0,  # x
+            0,  # edge
+            0,  # diag1
+            0,  # diag2
+            1,  # one junk as always
+        ],  # TODO
     ]
 )
 # one for each row
