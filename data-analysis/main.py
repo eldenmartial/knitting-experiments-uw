@@ -6,6 +6,14 @@ atom_names = ["knit", "tuck", "miss", "x", "edge", "diag1", "diag2", "noise"]
 W = 116
 H = 82
 
+SKINNY_W = 16  # TODO
+SKINNY_H = 831  # TODO
+
+TUBE_W = 10  # TODO width of the tube as it sits on the bed (a full wraparound is 2x this in stitches)
+TUBE_H = (
+    148  # TODO height of the tube in courses (2 * TUBE_W * TUBE_H stitches in total)
+)
+
 # each ROW corresponds to a swatch. Each COLUMN corresponds with an atom
 X = np.array(
     [
@@ -19,6 +27,26 @@ X = np.array(
             0,  # diag2
             1,  # one junk as always
         ],  # single jersey, W wide * H high AFTER cast-on
+        [
+            W * H,  # knits
+            (W / 2) * 2,  # tucks
+            (W / 2) * 2,  # misses
+            0,  # x
+            (2 + H) - 1,  # edge
+            0,  # diag1
+            0,  # diag2
+            1,  # one junk as always
+        ],  # single jersey, BUT AGAIN
+        [
+            SKINNY_W * SKINNY_H,  # knits
+            (SKINNY_W / 2) * 2,  # tucks
+            (SKINNY_W / 2) * 2,  # misses
+            0,  # x
+            (2 + SKINNY_H) - 1,  # edge
+            0,  # diag1
+            0,  # diag2
+            1,  # one junk as always
+        ],  # skinny jersey
         [
             ((W - 2) * H / 2) + 2 * H,  # knits
             (W / 2) * 2 + ((W - 2) * H / 2),  # tucks (cast on PLUS checkerboard)
@@ -35,60 +63,40 @@ X = np.array(
             (W / 2) * 2,  # misses
             0,  # x
             (2 + H) - 1,  # edge
-            0,  # diag1
+            (W - 2) * H,  # diag1
             0,  # diag2
             1,  # one junk as always
         ],  # 1x1 rib, W wide * H high AFTER cast-on
         [
-            0,  # knits
-            0,  # tucks
-            0,  # misses
+            (W / 2) * H,  # knits
+            (W / 4) * 2,  # tucks
+            (3 * (W / 4)) * 2,  # misses
             0,  # x
-            0,  # edge
+            (2 + H) - 1,  # edge
             0,  # diag1
-            0,  # diag2
+            (W - 2) * H,  # diag2
             1,  # one junk as always
-        ],  # TODO
+        ],  # half-gauge rib, W wide on the bed (so W/2 wales)
         [
-            0,  # knits
-            0,  # tucks
-            0,  # misses
+            (W / 2) * H,  # knits
+            (W / 4) * 2,  # tucks
+            (3 * (W / 4)) * 2,  # misses
             0,  # x
             0,  # edge
             0,  # diag1
             0,  # diag2
             1,  # one junk as always
-        ],  # TODO
+        ],  # half-gauge jersey, W wide on the bed (so W/2 wales)
         [
-            0,  # knits
+            (TUBE_W * 2) * TUBE_H,  # knits
             0,  # tucks
             0,  # misses
-            0,  # x
+            (1 + H) * 2 - 1,  # x TODO check my math
             0,  # edge
             0,  # diag1
             0,  # diag2
             1,  # one junk as always
-        ],  # TODO
-        [
-            0,  # knits
-            0,  # tucks
-            0,  # misses
-            0,  # x
-            0,  # edge
-            0,  # diag1
-            0,  # diag2
-            1,  # one junk as always
-        ],  # TODO
-        [
-            0,  # knits
-            0,  # tucks
-            0,  # misses
-            0,  # x
-            0,  # edge
-            0,  # diag1
-            0,  # diag2
-            1,  # one junk as always
-        ],  # TODO
+        ],  # tube jersey
     ]
 )
 # one for each row
