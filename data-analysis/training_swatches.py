@@ -4,8 +4,8 @@ from knit_swatch import KnitSwatch
 def make_training_swatches(
     W: int,
     H: int,
-    W2: int,
-    H2: int,
+    Wkinda: int,
+    Hkinda: int,
     SKINNY_W: int,
     SKINNY_H: int,
     TUBE_W: int,
@@ -13,14 +13,14 @@ def make_training_swatches(
 ):
     single_jersey = KnitSwatch.jersey(width=W, height=H)
 
-    single_jersey_again = KnitSwatch.jersey(width=W2, height=H2)
+    kinda_narrow_jersey = KnitSwatch.jersey(width=Wkinda, height=Hkinda)
 
     skinny_jersey = KnitSwatch.jersey(width=SKINNY_W, height=SKINNY_H)
 
     tuck_stitch = KnitSwatch(
-        knits=int(((W - 2) * H / 2) + 2 * H),
-        tucks=int((W / 2) * 2 + ((W - 2) * H / 2)),
-        misses=int((W / 2) * 2),
+        knit=int(((W - 2) * H / 2) + 2 * H),
+        tuck=int((W / 2) * 2 + ((W - 2) * H / 2)),
+        miss=int((W / 2) * 2),
         x=0,
         edge=(2 + H) - 1,
         diag1=0,
@@ -29,9 +29,9 @@ def make_training_swatches(
     )
 
     rib_1x1 = KnitSwatch(
-        knits=W * H,
-        tucks=int((W / 2) * 2),
-        misses=int((W / 2) * 2),
+        knit=W * H,
+        tuck=int((W / 2) * 2),
+        miss=int((W / 2) * 2),
         x=0,
         edge=(2 + H) - 1,
         diag1=(W - 1) * H,
@@ -40,9 +40,9 @@ def make_training_swatches(
     )
 
     half_gauge_rib = KnitSwatch(
-        knits=int((W / 2) * H),
-        tucks=int((W / 4) * 2),
-        misses=int((3 * (W / 4)) * 2),
+        knit=int((W / 2) * H),
+        tuck=int((W / 4) * 2),
+        miss=int((3 * (W / 4)) * 2),
         x=0,
         edge=(2 + H) - 1,
         diag1=0,
@@ -51,9 +51,9 @@ def make_training_swatches(
     )
 
     half_gauge_jersey = KnitSwatch(
-        knits=int((W / 2) * H),
-        tucks=int((W / 4) * 2),
-        misses=int((3 * (W / 4)) * 2 + ((W / 2 - 1) * H)),
+        knit=int((W / 2) * H),
+        tuck=int((W / 4) * 2),
+        miss=int((3 * (W / 4)) * 2 + ((W / 2 - 1) * H)),
         x=0,
         edge=(2 + H) - 1,
         diag1=0,
@@ -62,9 +62,9 @@ def make_training_swatches(
     )
 
     tube_jersey = KnitSwatch(
-        knits=(TUBE_W * 2) * TUBE_H,
-        tucks=TUBE_W * 2,
-        misses=0,
+        knit=(TUBE_W * 2) * TUBE_H,
+        tuck=TUBE_W * 2,
+        miss=0,
         x=(1 + TUBE_H) * 2 - 1,  # TODO check my math
         edge=0,
         diag1=0,
@@ -80,7 +80,7 @@ def make_training_swatches(
         half_gauge_jersey,
         tuck_stitch,
         tube_jersey,
-        single_jersey_again,
+        kinda_narrow_jersey,
     ]
 
     return training_swatches

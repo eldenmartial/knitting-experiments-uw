@@ -1,13 +1,13 @@
 # from enum import Enum, auto
-from uw import make_training_swatches
+from training_swatches import make_training_swatches
 from knit_swatch import KnitSwatch
 import numpy as np
 
 W = 116
 H = 82
 
-W2 = 116
-H2 = 164
+Wkinda = 58
+Hkinda = 164
 
 SKINNY_W = 16  # TODO
 SKINNY_H = 831  # TODO
@@ -18,20 +18,31 @@ TUBE_H = (
 )
 
 training_swatches = make_training_swatches(
-    W, H, W2, H2, SKINNY_W, SKINNY_H, TUBE_W, TUBE_H
+    W, H, Wkinda, Hkinda, SKINNY_W, SKINNY_H, TUBE_W, TUBE_H
 )
 
 print(training_swatches)
 
+# training_swatches: list[KnitSwatch] = [
+#     rib_1x1,
+#     half_gauge_rib,
+#     skinny_jersey,
+#     single_jersey,
+#     half_gauge_jersey,
+#     tuck_stitch,
+#     tube_jersey,
+#     kinda_narrow_jersey,
+# ]
+
 weights = [
-    14.520,
-    14.520,  # TODO
-    13.064,
-    12.149,
-    0.0,  # TODO
-    8.502,
-    9.243,
-    10.803,
+    16.204,  # rib 1x1
+    8.399,  # half gauge rib
+    13.466,  # skinny jersey
+    13.837,  # single jersey
+    9.549,  # half gauge jersey
+    12.081,  # tuck stitch
+    11.820,  # tube jersey
+    12.511,  # kinda narrow
 ]
 
 assert len(training_swatches) == len(KnitSwatch.atom_names()), (
