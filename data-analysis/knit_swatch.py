@@ -54,6 +54,12 @@ class KnitSwatch:
             x=self.x,
         )
 
+    def __str__(self) -> str:
+        return (
+            f"KnitSwatch(diag1={self.diag1}, diag2={self.diag2}, edge={self.edge}, "
+            f"knit={self.knit}, miss={self.miss}, tuck={self.tuck}, x={self.x}, junk={self.junk})"
+        )
+
     @staticmethod
     def atom_names() -> list[str]:
         return [

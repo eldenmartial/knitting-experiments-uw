@@ -3,36 +3,22 @@ from training_swatches import make_training_swatches
 from knit_swatch import KnitSwatch
 import numpy as np
 
-W = 116
-H = 82
+W = 116  # checked
+H = 82  # checked
 
-Wkinda = 58
-Hkinda = 164
+Wkinda = 58  # checked
+Hkinda = 164  # checked
 
-SKINNY_W = 16  # TODO
-SKINNY_H = 831  # TODO
+SKINNY_W = 18  # checked
+SKINNY_H = 530  # checked (but is this a little high?)
 
-TUBE_W = 10  # TODO width of the tube as it sits on the bed (a full wraparound is 2x this in stitches)
-TUBE_H = (
-    148  # TODO height of the tube in courses (2 * TUBE_W * TUBE_H stitches in total)
-)
+TUBE_W = 10  # checked, width of the tube as it sits on the bed (a full wraparound is 2x this in stitches)
+TUBE_H = 476  # checked, height of the tube in courses (2 * TUBE_W * TUBE_H stitches in total)
 
 training_swatches = make_training_swatches(
     W, H, Wkinda, Hkinda, SKINNY_W, SKINNY_H, TUBE_W, TUBE_H
 )
 
-print(training_swatches)
-
-# training_swatches: list[KnitSwatch] = [
-#     rib_1x1,
-#     half_gauge_rib,
-#     skinny_jersey,
-#     single_jersey,
-#     half_gauge_jersey,
-#     tuck_stitch,
-#     tube_jersey,
-#     kinda_narrow_jersey,
-# ]
 
 weights = [
     16.204,  # rib 1x1
@@ -49,8 +35,28 @@ assert len(training_swatches) == len(KnitSwatch.atom_names()), (
     "We need a square matrix!"
 )
 
+names = [
+    "rib 1x1",
+    "half gauge rib",
+    "skinny jersey",
+    "single jersey",
+    "half gauge jersey",
+    "tuck stitch",
+    "tube jersey",
+    "kinda narrow",
+]
+for name, swatch, weight in zip(names, training_swatches, weights):
+    print(f"{name:<20}: {weight:.3f}g, {swatch}")
+
 A = np.array([swatch.to_list() for swatch in training_swatches])
 b = np.array(weights)
+
+# A = np.hstack([A, np.ones((A.shape[0], 1))])
+# A = A[:7, :7]
+# b = b[:7]
+
+print(A)
+print(b)
 
 # Ax = b => x = A^-1 b
 cond = np.linalg.cond(A)
@@ -62,7 +68,7 @@ x = np.linalg.inv(A) @ b
 
 print("Coefficients for each KnitUnit:")
 for name, coeff in zip(KnitSwatch.atom_names(), x):
-    print(f"{name:<10}: {coeff:.4f}")
+    print(f"{name:<10}: {coeff * 1000:.2f}mg")
 
 print("Sanity check:")
 predicted_weights = A @ x
