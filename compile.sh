@@ -22,6 +22,8 @@ if [ ${#js_files[@]} -ne 0 ]; then
         (cd to-compile && node "$(basename "$file")")
         log "Compiling $(basename "$file")"
         (cd compilers && cargo run --release --quiet -- "../to-compile/out.k" "../compiled/$(basename "$file" .js).dat")
+        # (cd compilers && node js.js "../to-compile/out.k" "../compiled/$(basename "$file" .js).dat")
+        # read -p "Press Enter to continue..."
         rm to-compile/out.k
     done
 fi

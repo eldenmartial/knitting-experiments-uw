@@ -16,12 +16,12 @@ from lib import (
     tuckStitch,
 )  # need these for globals()[pat]
 
-mainC = "1"
-wasteC = "2"
-drawC = "3"
+mainC = "5"
+wasteC = "3"
+drawC = "2"
 
 default_bed = "f"
-default_stitchNumber = 63
+default_stitchNumber = 7
 default_speedNumber = 0
 
 
@@ -38,9 +38,6 @@ def generate(swatches, out_fp, sort_by_width=True):
 
         if (pat[1][0] - 1) % pat[2] != 0:
             pat[1][0] += (pat[1][0] - 1) % pat[2]
-
-    if sort_by_width:
-        pat_info = sorted(pat_info, key=lambda x: x[1][0])  # sort by right needle
 
     print(pat_info)  # debug
 

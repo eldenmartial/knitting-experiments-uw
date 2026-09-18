@@ -20,7 +20,8 @@ training_swatches = make_training_swatches(
 )
 
 
-weights = [
+# on Fri 26-05-22
+weights_old = [
     16.204,  # rib 1x1
     8.399,  # half gauge rib
     13.466,  # skinny jersey
@@ -29,6 +30,19 @@ weights = [
     12.081,  # tuck stitch
     11.820,  # tube jersey
     12.511,  # kinda narrow
+]
+
+
+# on Thu 2026-05-28
+weights = [
+    15.096,  # rib 1x1
+    9.000,  # half gauge rib
+    11.627,  # skinny jersey
+    12.965,  # single jersey
+    8.347,  # half gauge jersey
+    12.536,  # tuck stitch
+    11.950,  # tube jersey
+    12.622,  # kinda narrow
 ]
 
 assert len(training_swatches) == len(KnitSwatch.atom_names()), (
