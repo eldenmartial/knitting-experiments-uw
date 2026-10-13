@@ -1,6 +1,7 @@
 # Knitting Experiments 
 
-Elden Martial
+By Elden Martial
+
 Many thanks to Nat Hurtig
 
 A working repository of my machine-knitting experiments: metric studies, creative test swatches, and machine debugging. It also holds the notes and guides I've written along the way on running the machine, the math behind the patterns, and what I've learned.
