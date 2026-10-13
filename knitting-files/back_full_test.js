@@ -6,22 +6,32 @@ k = new knitout.Writer({ carriers: ["1", "2", "3", "4", "5", "6", "7", "8", "9",
 k.addHeader('Machine', 'SWGXYZ');
 k.addHeader('Gauge', '15');
 k.addHeader('Width', '270');
-k.addHeader('Position', 'Center');
+k.addHeader('Position', 'Left');
 
 // swatch variables
 var height = 20;
-var width = 250;
-var c = "4";
+var width = 140;
+var c = "3";
 k.fabricPresser("auto");
 
 // bring in carrier using yarn inserting hook
 k.inhook(c);
 // tuck on alternate needles to cast on
 for (let s = width; s > 0; s--) {
-    k.tuck("-", "b" + s, c);
+    if (s % 2 == 0) {
+        k.tuck("-", "b" + s, c);
+    }
+    else {
+        k.miss("-", "b" + s, c);
+    }
 }
 for (let s = 1; s <= width; s++) {
-    k.tuck("+", "f" + s, c);
+    if (s % 2 != 0) {
+        k.tuck("+", "b" + s, c);
+    }
+    else {
+        k.miss("+", "b" + s, c);
+    }
 }
 
 // release the yarn inserting hook
@@ -32,7 +42,7 @@ for (var h = 0; h < height; h++) {
         k.knit("-", "b" + s, c);
     }
     for (var s = 1; s <= width; s++) {
-        k.knit("+", "f" + s, c);
+        k.knit("+", "b" + s, c);
     }
 }
 

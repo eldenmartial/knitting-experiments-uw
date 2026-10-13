@@ -1,7 +1,7 @@
 #!/bin/bash
-# hello
+
 # compile everything in knitting-files
-find knitting-files -type f -exec cp {} to-compile/ \;
+# find knitting-files -type f -exec cp {} to-compile/ \;
 
 rm -rf compiled
 mkdir -p compiled
